@@ -10,6 +10,7 @@ const CompanyForm = ({ contract, account }) => {
   const [placeholder2, setPlaceholder2] = useState('');
   const [mintedCompanies, setMintedCompanies] = useState([]);
   const [totalMinted, setTotalMinted] = useState(0);
+  const [expandedTokenId, setExpandedTokenId] = useState(null);
   // Add local storage for demonstration
   const [localCompanies, setLocalCompanies] = useState(() => {
     const saved = localStorage.getItem('mintedCompanies');
@@ -187,22 +188,43 @@ const CompanyForm = ({ contract, account }) => {
             <h3>Available Data</h3>
             <p>Total Details: {localCompanies.length}</p>
             
-            {localCompanies.map((company) => (
-              <div key={company.tokenId} className="company-item">
-                <p>Token ID: {company.tokenId}</p>
-                <p>Student ID: {company.name}</p>
-                <p>Marks (Quiz): {company.tokenAmount}</p>
-                <p>Marks (Efficiency): {company.placeholder1}</p>
-                <p>Marks (Result): {company.placeholder2}</p>
-                <div className="hash-details">
-                  <p>SHA-256 Hash:</p>
-                  <code>{company.sha256Hash}</code>
-                  <p>MD5 Hash:</p>
-                  <code>{company.md5Hash}</code>
+            <div className="token-grid">
+              {localCompanies.map((company) => (
+                <div key={company.tokenId}>
+                  <div 
+                    className="token-square"
+                    onClick={() => setExpandedTokenId(expandedTokenId === company.tokenId ? null : company.tokenId)}
+                  >
+                    <span className="token-id">{company.tokenId}</span>
+                  </div>
+                  
+                  {expandedTokenId === company.tokenId && (
+                    <div className="company-item expanded-details">
+                      <button 
+                        className="close-button"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setExpandedTokenId(null);
+                        }}
+                      >
+                        ×
+                      </button>
+                      <p>Student ID: {company.name}</p>
+                      <p>Marks (Quiz): {company.tokenAmount}</p>
+                      <p>Marks (Efficiency): {company.placeholder1}</p>
+                      <p>Marks (Result): {company.placeholder2}</p>
+                      <div className="hash-details">
+                        <p>SHA-256 Hash:</p>
+                        <code>{company.sha256Hash}</code>
+                        <p>MD5 Hash:</p>
+                        <code>{company.md5Hash}</code>
+                      </div>
+                      <p className="timestamp">Minted: {new Date(company.timestamp).toLocaleString()}</p>
+                    </div>
+                  )}
                 </div>
-                <p className="timestamp">Minted: {new Date(company.timestamp).toLocaleString()}</p>
-              </div>
-            ))}
+              ))}
+            </div>
 
             {/* Development tools */}
             {process.env.NODE_ENV === 'development' && (
