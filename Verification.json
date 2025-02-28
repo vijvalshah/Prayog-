@@ -1,0 +1,95 @@
+{
+  "experiment_sessions": [
+    {
+      "session_id": "ses_2024022801",
+      "student_id": "STU2024001",
+      "experiment_id": "EXP_PHYS_101",
+      "step_sequence": [
+        {
+          "action": "setup_apparatus",
+          "timestamp": "2024-02-28T09:15:00Z",
+          "status": "completed"
+        },
+        {
+          "action": "measure_initial_values",
+          "timestamp": "2024-02-28T09:17:30Z",
+          "status": "completed"
+        },
+        {
+          "action": "adjust_parameters",
+          "timestamp": "2024-02-28T09:20:00Z",
+          "status": "completed_with_error"
+        },
+        {
+          "action": "record_observations",
+          "timestamp": "2024-02-28T09:25:00Z",
+          "status": "completed"
+        }
+      ],
+      "total_time": 900,
+      "error_count": 2,
+      "repeated_errors": 1,
+      "final_outcome": "success",
+      "timestamp": "2024-02-28T09:30:00Z"
+    },
+    {
+      "session_id": "ses_2024022802",
+      "student_id": "STU2024015",
+      "experiment_id": "EXP_PHYS_101",
+      "step_sequence": [
+        {
+          "action": "setup_apparatus",
+          "timestamp": "2024-02-28T10:00:00Z",
+          "status": "completed"
+        },
+        {
+          "action": "measure_initial_values",
+          "timestamp": "2024-02-28T10:05:00Z",
+          "status": "error"
+        },
+        {
+          "action": "measure_initial_values",
+          "timestamp": "2024-02-28T10:07:00Z",
+          "status": "completed"
+        },
+        {
+          "action": "record_observations",
+          "timestamp": "2024-02-28T10:15:00Z",
+          "status": "completed"
+        }
+      ],
+      "total_time": 1200,
+      "error_count": 3,
+      "repeated_errors": 2,
+      "final_outcome": "completed_with_assistance",
+      "timestamp": "2024-02-28T10:20:00Z"
+    },
+    {
+      "session_id": "ses_2024022803",
+      "student_id": "STU2024022",
+      "experiment_id": "EXP_PHYS_102",
+      "step_sequence": [
+        {
+          "action": "setup_apparatus",
+          "timestamp": "2024-02-28T11:00:00Z",
+          "status": "completed"
+        },
+        {
+          "action": "calibrate_instruments",
+          "timestamp": "2024-02-28T11:05:00Z",
+          "status": "completed"
+        },
+        {
+          "action": "record_measurements",
+          "timestamp": "2024-02-28T11:10:00Z",
+          "status": "completed"
+        }
+      ],
+      "total_time": 750,
+      "error_count": 0,
+      "repeated_errors": 0,
+      "final_outcome": "success",
+      "timestamp": "2024-02-28T11:12:30Z"
+    }
+  ]
+} 

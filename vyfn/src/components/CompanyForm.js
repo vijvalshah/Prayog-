@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Hero from './Hero';
 import './CompanyForm.css';
+import { computeHash } from '../utils/hashUtil';
 
 const CompanyForm = ({ contract, account }) => {
   const [companyName, setCompanyName] = useState('');
@@ -76,9 +77,19 @@ const CompanyForm = ({ contract, account }) => {
           throw new Error('Invalid Marks');
         }
 
+        // Compute hashes for the data
+        const dataForHash = {
+          studentId: companyName,
+          quizMarks: amount,
+          efficiencyMarks: p1,
+          resultMarks: p2,
+          timestamp: new Date().toISOString()
+        };
+        const hashes = computeHash(dataForHash);
+
         await contract.mintCompany(companyName, amount, p1, p2);
         
-        // Add to local storage immediately
+        // Add to local storage with hashes
         const newCompany = {
           tokenId: localCompanies.length.toString(),
           name: companyName,
@@ -86,6 +97,8 @@ const CompanyForm = ({ contract, account }) => {
           placeholder1: p1,
           placeholder2: p2,
           owner: account,
+          sha256Hash: hashes.sha256,
+          md5Hash: hashes.md5,
           timestamp: new Date().toISOString()
         };
         setLocalCompanies(prev => [...prev, newCompany]);
@@ -181,6 +194,12 @@ const CompanyForm = ({ contract, account }) => {
                 <p>Marks (Quiz): {company.tokenAmount}</p>
                 <p>Marks (Efficiency): {company.placeholder1}</p>
                 <p>Marks (Result): {company.placeholder2}</p>
+                <div className="hash-details">
+                  <p>SHA-256 Hash:</p>
+                  <code>{company.sha256Hash}</code>
+                  <p>MD5 Hash:</p>
+                  <code>{company.md5Hash}</code>
+                </div>
                 <p className="timestamp">Minted: {new Date(company.timestamp).toLocaleString()}</p>
               </div>
             ))}
