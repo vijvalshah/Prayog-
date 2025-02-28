@@ -38,8 +38,8 @@
       ]
     },
     "C:\\Users\\Aakansh\\Documents\\Git\\Prayog\\test\\contracts\\Box.sol": {
-      "lastModificationDate": 1740745734926,
-      "contentHash": "2a6fe801012ebfdc3fb14a1022171ac8",
+      "lastModificationDate": 1740757393010,
+      "contentHash": "0a3bafac27c3e05256b2dd4f5eaedb4f",
       "sourceName": "contracts/Box.sol",
       "solcConfig": {
         "version": "0.8.24",

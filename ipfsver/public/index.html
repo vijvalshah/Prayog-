@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPFS Verification</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>IPFS Verification System</h1>
+        
+        <div class="verification-form">
+            <div class="ipfs-files">
+                <h3>Available IPFS Files</h3>
+                <div class="files-list" id="filesList">
+                    <p>Loading files...</p>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="ipfsHash">IPFS Hash:</label>
+                <input type="text" id="ipfsHash" placeholder="Enter IPFS hash or select from above">
+            </div>
+            
+            <div class="hash-display">
+                <h3>File Hashes</h3>
+                <div class="hash-container">
+                    <p>SHA-256: <span id="sha256Hash">-</span></p>
+                    <p>MD5: <span id="md5Hash">-</span></p>
+                </div>
+            </div>
+
+            <div class="file-content">
+                <h3>File Content</h3>
+                <pre id="fileContent">Select a file to view its content</pre>
+            </div>
+
+            <button id="verifyBtn" class="verify-btn">Verify File</button>
+
+            <div class="result-container">
+                <div id="verificationResult" class="hidden">
+                    <div class="result-icon">✓</div>
+                    <p class="result-message">Verification Successful</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="verify.js"></script>
+</body>
+</html> 
