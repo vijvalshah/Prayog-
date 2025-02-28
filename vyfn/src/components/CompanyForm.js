@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Hero from './Hero';
 import './CompanyForm.css';
 import { computeHash } from '../utils/hashUtil';
+import { uploadToIPFS, getFromIPFS } from '../utils/ipfsUtil';
 
 const CompanyForm = ({ contract, account }) => {
   const [companyName, setCompanyName] = useState('');
@@ -16,6 +17,7 @@ const CompanyForm = ({ contract, account }) => {
     const saved = localStorage.getItem('mintedCompanies');
     return saved ? JSON.parse(saved) : [];
   });
+  const [ipfsStatus, setIpfsStatus] = useState({});
 
   useEffect(() => {
     if (contract && account) {
@@ -89,9 +91,21 @@ const CompanyForm = ({ contract, account }) => {
         };
         const hashes = computeHash(dataForHash);
 
+        // Upload to IPFS before minting
+        let ipfsHash = null;
+        try {
+          ipfsHash = await uploadToIPFS({
+            ...dataForHash,
+            hashes
+          });
+        } catch (ipfsError) {
+          console.error('IPFS upload failed:', ipfsError);
+          // Continue with minting even if IPFS fails
+        }
+
         await contract.mintCompany(companyName, amount, p1, p2);
         
-        // Add to local storage with hashes
+        // Add to local storage with hashes and IPFS hash
         const newCompany = {
           tokenId: localCompanies.length.toString(),
           name: companyName,
@@ -101,6 +115,7 @@ const CompanyForm = ({ contract, account }) => {
           owner: account,
           sha256Hash: hashes.sha256,
           md5Hash: hashes.md5,
+          ipfsHash,
           timestamp: new Date().toISOString()
         };
         setLocalCompanies(prev => [...prev, newCompany]);
@@ -118,6 +133,24 @@ const CompanyForm = ({ contract, account }) => {
         console.error('Error minting Details:', error);
         alert('Error minting Student Details. Check console for details.');
       }
+    }
+  };
+
+  // Add new function to fetch IPFS data
+  const fetchIPFSData = async (ipfsHash) => {
+    if (!ipfsHash || ipfsStatus[ipfsHash]) return;
+    
+    try {
+      const data = await getFromIPFS(ipfsHash);
+      setIpfsStatus(prev => ({
+        ...prev,
+        [ipfsHash]: { loaded: true, data }
+      }));
+    } catch (error) {
+      setIpfsStatus(prev => ({
+        ...prev,
+        [ipfsHash]: { loaded: true, error: error.message }
+      }));
     }
   };
 
@@ -194,7 +227,12 @@ const CompanyForm = ({ contract, account }) => {
                 <div key={company.tokenId}>
                   <div 
                     className="token-square"
-                    onClick={() => setExpandedTokenId(expandedTokenId === company.tokenId ? null : company.tokenId)}
+                    onClick={() => {
+                      setExpandedTokenId(expandedTokenId === company.tokenId ? null : company.tokenId);
+                      if (company.ipfsHash) {
+                        fetchIPFSData(company.ipfsHash);
+                      }
+                    }}
                   >
                     <span className="token-id">{company.tokenId}</span>
                   </div>
@@ -237,6 +275,11 @@ const CompanyForm = ({ contract, account }) => {
                             >
                               View on IPFS
                             </a>
+                            {ipfsStatus[company.ipfsHash]?.loaded && !ipfsStatus[company.ipfsHash]?.error && (
+                              <p className="ipfs-verification">
+                                <span className="detail-label">IPFS Verification:</span> Data verified
+                              </p>
+                            )}
                           </>
                         )}
                       </div>

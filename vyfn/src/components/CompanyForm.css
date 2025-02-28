@@ -87,7 +87,7 @@
   border: 1px solid rgba(252, 57, 231, 0.3);
   box-shadow: 0 0 20px rgba(17, 144, 232, 0.1);
   color: #1190e8;
-  padding: 2rem;
+  padding: 2rem 5rem;
   margin: 2rem auto 4rem;
   max-width: 600px;
   backdrop-filter: blur(10px);
@@ -152,6 +152,11 @@
   font-size: 0.8rem;
   color: rgba(252, 57, 231, 0.9) !important;
   font-style: italic;
+}
+
+.mint-form {
+  width: 100%;
+  max-width: 100%;
 }
 
 .mint-form input {
@@ -241,17 +246,22 @@
   grid-template-columns: 1fr;
   gap: 1rem;
   margin-bottom: 1rem;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .marks-inputs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 1rem;
+  padding-right: 0;
+  width: 100%;
 }
 
 .number-input {
   width: 100%;
+  min-width: 0; /* Prevent input from overflowing */
 }
 
 /* Remove up/down arrows (spinners) from number inputs */
@@ -364,7 +374,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) !important;
   z-index: 1000;
   width: 90%;
   max-width: 500px;
@@ -375,8 +385,13 @@
   border-radius: 12px;
   box-shadow: 0 0 30px rgba(252, 57, 231, 0.3);
   backdrop-filter: blur(10px);
-  animation: fadeIn 0.3s ease;
   border: 1px solid rgba(255, 141, 78, 0.3);
+  transition: none;
+}
+
+.expanded-details:hover {
+  transform: translate(-50%, -50%) !important;
+  box-shadow: 0 0 30px rgba(252, 57, 231, 0.3);
 }
 
 .close-button {
@@ -467,5 +482,40 @@
 .expanded-details p .detail-label {
   font-size: 1rem;
   margin-right: 0.5rem;
+}
+
+.ipfs-link {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  background: rgba(17, 144, 232, 0.1);
+  border: 1px solid rgba(17, 144, 232, 0.3);
+  border-radius: 4px;
+  color: #1190e8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.ipfs-link:hover {
+  background: rgba(17, 144, 232, 0.2);
+  border-color: #1190e8;
+  transform: translateY(-1px);
+}
+
+.ipfs-verification {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(56, 239, 230, 0.1);
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #38efe6 !important;
+}
+
+/* Remove any hover transformations from expanded details content */
+.expanded-details .company-item:hover,
+.expanded-details .hash-details:hover,
+.expanded-details p:hover {
+  transform: none !important;
 }
 
