@@ -41,6 +41,7 @@ const CompanyForm = ({ contract, account }) => {
             tokenAmount: details.tokenAmount,
             placeholder1: details.placeholder1,
             placeholder2: details.placeholder2,
+            totalScore: details.totalScore,
             owner: details.owner
           };
         })
@@ -100,8 +101,7 @@ const CompanyForm = ({ contract, account }) => {
           owner: account,
           sha256Hash: hashes.sha256,
           md5Hash: hashes.md5,
-          timestamp: new Date().toISOString(),
-          totalMarks: amount + p1 + p2
+          timestamp: new Date().toISOString()
         };
         setLocalCompanies(prev => [...prev, newCompany]);
         
@@ -210,18 +210,37 @@ const CompanyForm = ({ contract, account }) => {
                       >
                         ×
                       </button>
-                      <p>Student ID: {company.name}</p>
-                      <p>Marks (Quiz): {company.tokenAmount}</p>
-                      <p>Marks (Efficiency): {company.placeholder1}</p>
-                      <p>Marks (Result): {company.placeholder2}</p>
-                      <p className="total-marks">Total Marks: {company.totalMarks || (parseInt(company.tokenAmount) + parseInt(company.placeholder1) + parseInt(company.placeholder2))}</p>
-                      <div className="hash-details">
-                        <p>SHA-256 Hash:</p>
-                        <code>{company.sha256Hash}</code>
-                        <p>MD5 Hash:</p>
-                        <code>{company.md5Hash}</code>
+                      <p><span className="detail-label">Student ID:</span> {company.name}</p>
+                      <p><span className="detail-label">Marks (Quiz):</span> {company.tokenAmount}</p>
+                      <p><span className="detail-label">Marks (Efficiency):</span> {company.placeholder1}</p>
+                      <p><span className="detail-label">Marks (Result):</span> {company.placeholder2}</p>
+                      <div className="total-score-container">
+                        <span className="detail-label">Total Score:</span>
+                        <span className="total-score-value">
+                          {company.totalScore || (parseInt(company.tokenAmount) + parseInt(company.placeholder1) + parseInt(company.placeholder2))}
+                        </span>
                       </div>
-                      <p className="timestamp">Minted: {new Date(company.timestamp).toLocaleString()}</p>
+                      <div className="hash-details">
+                        <p><span className="detail-label">SHA-256 Hash:</span></p>
+                        <code>{company.sha256Hash}</code>
+                        <p><span className="detail-label">MD5 Hash:</span></p>
+                        <code>{company.md5Hash}</code>
+                        {company.ipfsHash && (
+                          <>
+                            <p><span className="detail-label">IPFS Hash:</span></p>
+                            <code>{company.ipfsHash}</code>
+                            <a 
+                              href={`https://gateway.pinata.cloud/ipfs/${company.ipfsHash}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="ipfs-link"
+                            >
+                              View on IPFS
+                            </a>
+                          </>
+                        )}
+                      </div>
+                      <p className="timestamp"><span className="detail-label">Minted:</span> {new Date(company.timestamp).toLocaleString()}</p>
                     </div>
                   )}
                 </div>

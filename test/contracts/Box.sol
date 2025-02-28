@@ -14,6 +14,7 @@ contract Box {
     mapping(uint256 => address) private _companyOwners;
     mapping(uint256 => uint256) private _companyTokenAmounts;
     mapping(address => uint256[]) private _userCompanies;
+    mapping(uint256 => uint256) private _totalScores; // New mapping for total scores
 
     // Add new mappings for placeholder values
     mapping(uint256 => uint256) private _placeholder1Values;
@@ -28,7 +29,8 @@ contract Box {
         string name, 
         uint256 amount,
         uint256 placeholder1,
-        uint256 placeholder2
+        uint256 placeholder2,
+        uint256 totalScore
     );
 
     function mintCompany(
@@ -44,14 +46,18 @@ contract Box {
         uint256 newTokenId = _tokenIdCounter;
         _tokenIdCounter++;
         
+        // Calculate total score
+        uint256 totalScore = tokenAmount + placeholder1 + placeholder2;
+        
         _companyNames[newTokenId] = name;
         _companyOwners[newTokenId] = msg.sender;
         _companyTokenAmounts[newTokenId] = tokenAmount;
         _placeholder1Values[newTokenId] = placeholder1;
         _placeholder2Values[newTokenId] = placeholder2;
+        _totalScores[newTokenId] = totalScore; // Store total score
         _userCompanies[msg.sender].push(newTokenId);
         
-        emit CompanyMinted(msg.sender, newTokenId, name, tokenAmount, placeholder1, placeholder2);
+        emit CompanyMinted(msg.sender, newTokenId, name, tokenAmount, placeholder1, placeholder2, totalScore);
     }
 
     // Get all companies owned by a user
@@ -65,7 +71,8 @@ contract Box {
         address owner,
         uint256 tokenAmount,
         uint256 placeholder1,
-        uint256 placeholder2
+        uint256 placeholder2,
+        uint256 totalScore
     ) {
         require(tokenId < _tokenIdCounter, "Company does not exist");
         return (
@@ -73,7 +80,8 @@ contract Box {
             _companyOwners[tokenId],
             _companyTokenAmounts[tokenId],
             _placeholder1Values[tokenId],
-            _placeholder2Values[tokenId]
+            _placeholder2Values[tokenId],
+            _totalScores[tokenId]
         );
     }
 

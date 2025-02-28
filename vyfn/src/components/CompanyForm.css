@@ -215,10 +215,10 @@
 }
 
 .hash-details p {
-  margin: 5px 0;
+  margin: 1rem 0 0.5rem 0;
   color: #fea217 !important;
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: 0.9em; 
 }
 
 .hash-details code {
@@ -232,6 +232,7 @@
   color: #fc39e7;
   margin-bottom: 10px;
   border: 1px solid rgba(255, 141, 78, 0.2);
+  margin-left: 1rem;
 }
 
 /* Keep existing form layout styles */
@@ -429,16 +430,42 @@
   }
 }
 
-.total-marks {
-  margin: 1rem 0;
-  padding: 0.8rem;
-  background: rgba(17, 144, 232, 0.1);
-  border: 1px solid rgba(17, 144, 232, 0.3);
-  border-radius: 4px;
-  color: #38efe6 !important;
-  font-size: 1.2rem;
+.detail-label {
+  color: #fea217;
   font-weight: bold;
-  text-align: center;
-  text-shadow: 0 0 10px rgba(8, 211, 191, 0.3);
+  font-family: 'Arial Black', sans-serif;
+  text-shadow: 0 0 5px rgba(254, 162, 23, 0.3);
+  margin-right: 0.5rem;
+}
+
+.total-score-container {
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.total-score-container .detail-label {
+  font-size: 1.4rem;
+  margin-left: 9.5rem;
+  color: #fea217;
+  font-weight: bold;
+  font-family: 'Arial Black', sans-serif;
+  text-shadow: 0 0 5px rgba(254, 162, 23, 0.3);
+}
+
+.total-score-value {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #38efe6;
+  text-shadow: 0 0 15px rgba(56, 239, 230, 0.5);
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* Update regular detail labels to be smaller than total score */
+.expanded-details p .detail-label {
+  font-size: 1rem;
+  margin-right: 0.5rem;
 }
 
