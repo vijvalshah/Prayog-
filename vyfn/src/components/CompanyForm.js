@@ -100,7 +100,8 @@ const CompanyForm = ({ contract, account }) => {
           owner: account,
           sha256Hash: hashes.sha256,
           md5Hash: hashes.md5,
-          timestamp: new Date().toISOString()
+          timestamp: new Date().toISOString(),
+          totalMarks: amount + p1 + p2
         };
         setLocalCompanies(prev => [...prev, newCompany]);
         
@@ -213,6 +214,7 @@ const CompanyForm = ({ contract, account }) => {
                       <p>Marks (Quiz): {company.tokenAmount}</p>
                       <p>Marks (Efficiency): {company.placeholder1}</p>
                       <p>Marks (Result): {company.placeholder2}</p>
+                      <p className="total-marks">Total Marks: {company.totalMarks || (parseInt(company.tokenAmount) + parseInt(company.placeholder1) + parseInt(company.placeholder2))}</p>
                       <div className="hash-details">
                         <p>SHA-256 Hash:</p>
                         <code>{company.sha256Hash}</code>
