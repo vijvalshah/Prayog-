@@ -67,6 +67,7 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 To run the frontend webage for SIFRA:
 ```
 cd LandingPage
+npm install
 npm run dev
 ```
 
@@ -142,6 +143,7 @@ The local blockchain is now started.
 ```
 cd ..
 cd vyfn
+npm install
 npm start
 ```
 
