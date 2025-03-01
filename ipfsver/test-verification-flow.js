@@ -56,7 +56,7 @@ async function testVerificationFlow() {
         // Wait a bit for IPFS to propagate
         await new Promise(resolve => setTimeout(resolve, 5000));
         
-        const ipfsUrl = `https://brown-rapid-mole-757.mypinata.cloud/ipfs/${uploadResult.IpfsHash}`;
+        const ipfsUrl = `https://gateway.pinata.cloud/ipfs/${uploadResult.IpfsHash}`;
         const response = await fetch(ipfsUrl, {
             agent: new https.Agent({
                 rejectUnauthorized: false

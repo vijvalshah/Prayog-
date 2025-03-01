@@ -1,0 +1,12 @@
+{
+    "session_id": "demo123",
+    "student_id": "student001",
+    "experiment_id": "titration_demo",
+    "step_sequence": ["prepare reagents", "add acid", "add base", "observe color change"],
+    "total_time": 300,
+    "error_count": 2,
+    "repeated_errors": 1,
+    "final_outcome": "partial_success",
+    "timestamp": "2025-02-28T10:00:00Z"
+  }
+  
