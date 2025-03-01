@@ -47,20 +47,11 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 ---
 
 ## *How It Works*
+- Multi-Module Reterival Using RAG
 ![Image](https://github.com/user-attachments/assets/1f0f7562-b980-4ee2-9910-7a92e6b2b865)
+<br/>
+- Blockchain based data integrity system
 ![Image](https://github.com/user-attachments/assets/74a9887f-a228-4cf2-ba17-c808807129ad)
-
-### *Company Side*
-1. *Company Registration*: Startups fill in their relevant details.
-2. *Milestones*: Companies update their progress as they achieve key milestones.
-3. *Verification*: All information is verified through blockchain oracles.
-4. *Smart Contract Issuance*: Tokens are minted for investors once the startup is verified.
-
-### *User Side*
-1. *Dashboard of Investments*: Users can track their investments in real-time.
-2. *AI-Powered Insights: Tools like **Venture Vitals, **Fiscal Fitness, and **Market Mojo* evaluate companies' growth prospects based on AI and web scraping.
-3. *Tokenized Investments*: Easily buy, sell, or transfer your tokens to another user via the Khatta wallet.
-4. *Valuation Updates*: Token values are dynamically updated based on company performance and milestones.
 
 ---
 
@@ -74,6 +65,7 @@ https://youtu.be/WSfYB1pqO4U
 
 ![Image](https://github.com/user-attachments/assets/3b30efd7-1c65-4e76-8e7b-821de7d98882)
 ![Image](https://github.com/user-attachments/assets/1bfceebf-9b2f-4bff-9316-ff39bdb6247a)
+![Image](https://github.com/user-attachments/assets/461d9359-1826-41d9-a7c3-259f4722204c)
 <br/>
 ### *Backend*
 - Node.js for server-side logic.
