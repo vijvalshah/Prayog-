@@ -5,15 +5,17 @@
     
 ## Problem Statement
 
-The startup ecosystem is rapidly growing, with over 30 million startups globally and thousands of new ones emerging each year. However, one of the most significant challenges facing retail investors is determining which startups will succeed and which will fail. Venture Capitalists (VCs) have exclusive tools and data to make decisions, but retail investors are left with minimal access to insights and thus shy away from investing in high-risk, high-reward startup opportunities.
+
+
+![image](https://github.com/user-attachments/assets/6cf3ec47-5320-44f0-9e45-8eef7efd2690)
+
 
 ![Image](https://github.com/user-attachments/assets/a9ba68bb-0293-4918-8797-ad4b28d793e6)
 
-The uncertainty surrounding startup success, combined with the lack of reliable prediction models, has made it difficult for non-institutional investors to confidently invest in startups. On top of that, existing solutions like stock market investments provide only a limited view of future growth and often lack transparency.
-
-Vyapaar seeks to revolutionize how retail investors approach startup investments by leveraging cutting-edge AI/ML models, blockchain transparency, and real-time data to predict startup success, manage investment risk, and ensure transparency.
 ---
-Project Overview
+<br/>
+
+# Project Overview
 
 This project is a Startup Success Prediction Model that combines Generative Adversarial Networks (GANs) and Reinforcement Learning (RL) to forecast the future success of startups. The model predicts startup success probabilities based on historical data and simulates various startup scenarios, including actions like raising funds, expanding markets, and cost management. The system uses GANs to generate future outcomes and RL to optimize startup strategies dynamically.
 <br>
@@ -69,21 +71,30 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 ## *Technology Stack*
 
 ### *Frontend*
-- React.js for user interfaces.
+- Nextjs for user interfaces.
 - HTML/CSS/JavaScript.
-- ![Frontend Video](https://github.com/user-attachments/assets/b6d394c9-0e03-4f9b-8a29-2e9d6b41f781)
-- 
-- ![Image](https://github.com/user-attachments/assets/3b30efd7-1c65-4e76-8e7b-821de7d98882)
-- ![Image](https://github.com/user-attachments/assets/1bfceebf-9b2f-4bff-9316-ff39bdb6247a)
+
+https://youtu.be/WSfYB1pqO4U
+
+![Image](https://github.com/user-attachments/assets/3b30efd7-1c65-4e76-8e7b-821de7d98882)
+![Image](https://github.com/user-attachments/assets/1bfceebf-9b2f-4bff-9316-ff39bdb6247a)
+<br/>
 ### *Backend*
 - Node.js for server-side logic.
 - Python for AI model and data handling.
+- Javascript
 
 
 ### *Blockchain*
 - Solidity for smart contract development including Minting,Updation, Dynamic Valuation and more.
+- Hardhat
+- Typescript
+- SnarkJS
+- Circom
 - Web3.js for wallet integration.
 - React.js for web app
+- Ether.js
+
 Blockchain ensures that all startup investments are secure, transparent, and efficient.
 
     Smart Contracts:
