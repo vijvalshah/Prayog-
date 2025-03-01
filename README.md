@@ -61,6 +61,14 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 > [!IMPORTANT]
 > Full Video For all Functionalities: https://youtu.be/WSfYB1pqO4U
 
+<br/>
+
+To run the frontend webage for SIFRA:
+```
+cd LandingPage
+npm run dev
+```
+
 ![Image](https://github.com/user-attachments/assets/3b30efd7-1c65-4e76-8e7b-821de7d98882)
 ![Image](https://github.com/user-attachments/assets/1bfceebf-9b2f-4bff-9316-ff39bdb6247a)
 ![Image](https://github.com/user-attachments/assets/461d9359-1826-41d9-a7c3-259f4722204c)
