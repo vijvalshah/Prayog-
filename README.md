@@ -1,4 +1,4 @@
-![WhatsApp Image 2025-03-01 at 16 28 43_6c93b6c8](https://github.com/user-attachments/assets/b5ac70e6-30af-433c-aec9-2028eac70cb4)
+![Image](https://github.com/user-attachments/assets/8dadee92-7ef9-46d8-975c-3974f7f55e5f)
 # *Prayog* - Where every mistake leads to discovery 
 
 <br/>
