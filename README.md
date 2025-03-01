@@ -1,8 +1,13 @@
-# *Prayog* - Where every mistake leads to discovery
+![Image](https://github.com/user-attachments/assets/b3c34949-c3dd-49d0-b195-78d5104cf8aa)
+# *Prayog* - Where every mistake leads to discovery 
 
-Problem Statement
+<br/>
+    
+## Problem Statement
 
 The startup ecosystem is rapidly growing, with over 30 million startups globally and thousands of new ones emerging each year. However, one of the most significant challenges facing retail investors is determining which startups will succeed and which will fail. Venture Capitalists (VCs) have exclusive tools and data to make decisions, but retail investors are left with minimal access to insights and thus shy away from investing in high-risk, high-reward startup opportunities.
+
+![Image](https://github.com/user-attachments/assets/a9ba68bb-0293-4918-8797-ad4b28d793e6)
 
 The uncertainty surrounding startup success, combined with the lack of reliable prediction models, has made it difficult for non-institutional investors to confidently invest in startups. On top of that, existing solutions like stock market investments provide only a limited view of future growth and often lack transparency.
 
@@ -122,6 +127,9 @@ cd ..
 cd vyfn
 npm start
 ```
+
+![Image](https://github.com/user-attachments/assets/fd623209-e20f-479b-8b3a-87bad785923e)
+
 ---
 
 ## *AI Model*
