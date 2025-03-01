@@ -1,6 +1,6 @@
 class ChatBot {
     constructor() {
-        this.API_KEY = "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";
+        this.API_KEY = "YOUR_API_KEY";
         this.API_URL = "https://api.groq.com/openai/v1/chat/completions";
         this.MODEL_NAME = "llama-3.3-70b-versatile";
         
