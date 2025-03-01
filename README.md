@@ -57,7 +57,8 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 - Nextjs for user interfaces.
 - HTML/CSS/JavaScript.
 
-https://youtu.be/WSfYB1pqO4U
+> [!IMPORTANT]
+> Full Video For all Functionalities: https://youtu.be/WSfYB1pqO4U
 
 ![Image](https://github.com/user-attachments/assets/3b30efd7-1c65-4e76-8e7b-821de7d98882)
 ![Image](https://github.com/user-attachments/assets/1bfceebf-9b2f-4bff-9316-ff39bdb6247a)
