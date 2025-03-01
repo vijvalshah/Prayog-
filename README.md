@@ -1,4 +1,4 @@
-![Image](https://github.com/user-attachments/assets/b3c34949-c3dd-49d0-b195-78d5104cf8aa)
+![image](https://github.com/user-attachments/assets/a4d73f15-35a4-418b-9b84-90873d95fb7f)![Image](https://github.com/user-attachments/assets/b3c34949-c3dd-49d0-b195-78d5104cf8aa)
 # *Prayog* - Where every mistake leads to discovery 
 
 <br/>
@@ -44,6 +44,7 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 - Multi-Module Reterival Using RAG
 
 ![Image](https://github.com/user-attachments/assets/1f0f7562-b980-4ee2-9910-7a92e6b2b865)
+
 <br/>
 
 - Blockchain based data integrity system
@@ -53,7 +54,7 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 
 ## *Technology Stack*
 
-### *Frontend*
+## *Frontend*
 - Nextjs for user interfaces.
 - HTML/CSS/JavaScript.
 
@@ -63,14 +64,16 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 ![Image](https://github.com/user-attachments/assets/3b30efd7-1c65-4e76-8e7b-821de7d98882)
 ![Image](https://github.com/user-attachments/assets/1bfceebf-9b2f-4bff-9316-ff39bdb6247a)
 ![Image](https://github.com/user-attachments/assets/461d9359-1826-41d9-a7c3-259f4722204c)
+
 <br/>
-### *Backend*
+
+## *Backend*
 - Node.js for server-side logic.
 - Python for AI model and data handling.
 - Javascript
 
 
-### *Blockchain*
+## *Blockchain*
 - Solidity for smart contract development including Minting,Updation, Dynamic Valuation and more.
 - Hardhat
 - Typescript
@@ -80,21 +83,30 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 - React.js for web app
 - Ether.js
 
-Blockchain ensures that all startup investments are secure, transparent, and efficient.
+Blockchain ensures that all Scores are secure, transparent, and distributed.
 
-    Smart Contracts:
-        Automate milestone-based payments to startups.
-        Investors can track whether startups are hitting performance targets in real-time, and payments are automatically released when conditions are met.
-        Valuation adjustments happen transparently and automatically based on the output from the AI models (financial score, risk simulation).
+    Data Storage: It defines a structure called ExperimentLog that holds a unique IPFS CID and a timestamp for each experiment session.
+    The contract uses a mapping to store an array of these logs for each student’s address, ensuring that each student's experiment history is preserved.
 
-    Ownership Representation through NFTs:
-        Startup equity can be tokenized through Non-Fungible Tokens (NFTs) that represent ownership. These tokens are traceable, divisible, and tradeable on the blockchain.
-        Investors can trade tokens, representing their ownership, securely on the blockchain, ensuring liquidity and easy exit strategies.
+    Immutable Logging:
+        Through the storeLog function, when a new experiment session is completed, the system generates a JSON file of the session data and uploads it to IPFS. The returned CID (along with a timestamp) is then stored on-chain.
+        This creates an immutable record—once stored, the data cannot be altered, which is critical for maintaining data integrity and trust.
 
-    Transaction Security:
-        All transactions between startups and investors are stored on a decentralized ledger, ensuring tamper-proof records.
-        By decentralizing the investment process, trust is guaranteed, and investors can monitor their investments in real-time.
+    Transparency & Auditability:
+        The smart contract emits an event (LogStored) every time a log is saved. This event can be monitored in real-time, providing an audit trail that educators and regulators can use to verify the authenticity of the experiment data.
+        Anyone can retrieve these logs by querying the blockchain, ensuring complete transparency.
 
+    Foundational for Adaptive Learning:
+        The secure, immutable logs are later used to feed our adaptive learning system. By analyzing these records, the system can provide personalized feedback based on historical performance, further enhancing the educational experience.
+
+<br/>
+
+> [!TIP]
+> In essence, our smart contract guarantees that every experiment session’s data is securely, transparently, and immutably recorded—forming the backbone of our data integrity and trust system in LabMate. This is what sets our solution apart, ensuring that educators and stakeholders can always verify the authenticity of a student’s performance.
+
+<br/>
+
+## Running Blockchain locally
 Starting node on hardhat:
 
 ![Screenshot 2024-10-05 103319](https://github.com/user-attachments/assets/d9c81da2-330e-41a2-a027-1c21fa28137f)
@@ -127,9 +139,10 @@ npm start
 ![Image](https://github.com/user-attachments/assets/fd623209-e20f-479b-8b3a-87bad785923e)
 
 ---
+## *INNOVATION & ACCESSIBILITIY*
 
+- AI-Driven Precision Learning, Chetna leverages Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs) to predict learning gaps, personalize recommendations, and turn student mistakes into data-driven insights for improvement.
+- Intelligent Virtual Lab Assistance SIFRA acts as a dynamic multi-modal lab agent, providing real-time procedural guidance, conceptual clarifications, and interactive troubleshooting to enhance hands-on virtual experiments.
+- Blockchain-Powered Academic Integrity Prayog Integrity System secures student performance records on a decentralized ledger with Solidity-based smart contracts and MetaMask integration, ensuring immutable, tamper-proof academic tracking.
+- Seamless & Inclusive Learning With speech-to-text, text-to-speech, and adaptive AI models, our system ensures multi-sensory accessibility, enabling a personalized, barrier-free learning experience for all students.
 
----
-
-
-This structure integrates the concepts and flows presented in the image, covering both company and user perspectives, AI analysis, and blockchain functionality.
