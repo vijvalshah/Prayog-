@@ -48,8 +48,10 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 
 ## *How It Works*
 - Multi-Module Reterival Using RAG
+
 ![Image](https://github.com/user-attachments/assets/1f0f7562-b980-4ee2-9910-7a92e6b2b865)
 <br/>
+
 - Blockchain based data integrity system
 ![Image](https://github.com/user-attachments/assets/74a9887f-a228-4cf2-ba17-c808807129ad)
 
