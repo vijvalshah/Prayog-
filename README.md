@@ -27,6 +27,7 @@ This project is a Startup Success Prediction Model that combines Generative Adve
 
 In India, the scarcity of well-equipped laboratories and the high student-to-teacher ratio severely limit hands‑on science learning—especially in rural areas. Traditional virtual lab platforms lack personalized feedback and tamper-proof record-keeping, leading to inconsistent educational outcomes. LabMate bridges this gap by providing real‑time, adaptive guidance tailored to each student's unique performance profile.By giving them a chance to make errors and learn from it unlik eprewsent OLABS and By harnessing advanced Retrieval-Augmented Generation (RAG) techniques and integrating blockchain for immutable data logging, LabMate ensures that every experiment session is transparent, verifiable, and optimized for continuous learning. This system not only minimizes common experimental errors but also instills confidence in educators and regulators through its secure, decentralized audit trail.
 
+![Image](https://github.com/user-attachments/assets/d45644dc-1f1e-4f36-87f0-63f087c5351c)
 
 ---
 
@@ -149,8 +150,9 @@ npm start
 ---
 ## *INNOVATION & ACCESSIBILITIY*
 
-- AI-Driven Precision Learning, Chetna leverages Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs) to predict learning gaps, personalize recommendations, and turn student mistakes into data-driven insights for improvement.
-- Intelligent Virtual Lab Assistance SIFRA acts as a dynamic multi-modal lab agent, providing real-time procedural guidance, conceptual clarifications, and interactive troubleshooting to enhance hands-on virtual experiments.
-- Blockchain-Powered Academic Integrity Prayog Integrity System secures student performance records on a decentralized ledger with Solidity-based smart contracts and MetaMask integration, ensuring immutable, tamper-proof academic tracking.
+- AI-Driven Precision Learning, *Chetna* leverages Retrieval-Augmented Generation (RAG) and Large Language Models (LLMs) to predict learning gaps, personalize recommendations, and turn student mistakes into data-driven insights for improvement.
+- Intelligent Virtual Lab Assistance *SIFRA* acts as a dynamic multi-modal lab agent, providing real-time procedural guidance, conceptual clarifications, and interactive troubleshooting to enhance hands-on virtual experiments.
+- Blockchain-Powered Academic Integrity *Prayog Integrity System* secures student performance records on a decentralized ledger with Solidity-based smart contracts and MetaMask integration, ensuring immutable, tamper-proof academic tracking.
 - Seamless & Inclusive Learning With speech-to-text, text-to-speech, and adaptive AI models, our system ensures multi-sensory accessibility, enabling a personalized, barrier-free learning experience for all students.
 
+![Image](https://github.com/user-attachments/assets/9b2f82f9-ed80-4e34-807c-fd705cddd2f0)
