@@ -21,12 +21,6 @@ This project is a Startup Success Prediction Model that combines Generative Adve
 2. [Features](#features)
 3. [How It Works](#how-it-works)
 4. [Technology Stack](#technology-stack)
-5. [AI Model](#ai-model)
-6. [Blockchain Integration](#blockchain-integration)
-7. [Installation Guide](#installation-guide)
-8. [Usage](#usage)
-9. [Security](#security)
-10. [License](#license)
 ---
 
 ## *Introduction*
