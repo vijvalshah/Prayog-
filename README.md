@@ -4,7 +4,7 @@
 <br/>
     
 ## Problem Statement
-Virtual labs lack personalized learning, as they do not track individual progress, leading to uneven educational experiences. Without smart feedback, students often repeat the same mistakes without guidance for improvement. Additionally, these labs fail to analyze errors, preventing them from predicting learning gaps and warning students about future challenges. The one-size-fits-all approach means every student receives the same experience, regardless of their unique strengths or struggles. Furthermore, the burden falls on teachers to manually track performance, making it difficult to provide real-time feedback and support.
+Virtual labs lack personalized learning, as they do not track individual progress, leading to uneven educational experiences. Without smart feedback, students often repeat the same mistakes without guidance for improvement. Additionally, these labs fail to analyze errors, preventing them from predicting learning gaps and warning students about future challenges. The one-size-fits-all approach means every student receives the same experience, regardless of their unique strengths or struggles. Furthermore, the burden falls on teachers to manually track performance, making it difficult to provide real-time feedback and support for the students.
 
 ![Image](https://github.com/user-attachments/assets/a9ba68bb-0293-4918-8797-ad4b28d793e6)
 
