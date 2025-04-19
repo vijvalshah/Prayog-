@@ -12,8 +12,8 @@ Virtual labs lack personalized learning, as they do not track individual progres
 <br/>
 
 # Project Overview
+Prayog revolutionizes virtual science learning by addressing the limitations of traditional labs through personalized, AI-driven guidance via Retrieval-Augmented Generation, coupled with the secure and transparent record-keeping of blockchain technology. This innovative platform empowers students to learn actively from their mistakes with intelligent feedback from Chetna and SIFRA, while ensuring the integrity and auditability of their progress through the Prayog Integrity System. By fostering a learning environment where errors lead to discovery and providing accessible tools for all learners, Prayog sets a new standard for virtual science education, particularly in resource-constrained environments.
 
-This project is a Startup Success Prediction Model that combines Generative Adversarial Networks (GANs) and Reinforcement Learning (RL) to forecast the future success of startups. The model predicts startup success probabilities based on historical data and simulates various startup scenarios, including actions like raising funds, expanding markets, and cost management. The system uses GANs to generate future outcomes and RL to optimize startup strategies dynamically.
 <br>
 ## *Table of Contents*
 
