@@ -31,14 +31,6 @@ In India, the scarcity of well-equipped laboratories and the high student-to-tea
 
 ---
 
-## *Features*
-
-- *AI-Driven Financial Analysis*: Tailored insights using AI for evaluating startups' fiscal health, market potential, and long-term viability.
-- *Smart Contract Integration*: Automated agreements executed securely on blockchain.
-- *Tokenized Startup Investments*: Shares are converted into tokens for enhanced liquidity and transferability.
-- *Secure User Wallet (Khatta)*: Manage your tokens and investments with a web3 wallet integrated within the platform.
-- *Real-Time Valuation Updates*: Companies’ milestones and progress trigger real-time valuation changes, verified by blockchain oracles.
-
 ---
 
 ## *How It Works*
